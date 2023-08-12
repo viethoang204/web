@@ -1,0 +1,193 @@
+/* RMIT University Vietnam
+Course: COSC2430 Web Programming
+Semester: 2023B
+Assessment: Assignment 1
+Author: Duong Viet Hoang
+ID: S3962514 */
+
+/* Global settings */
+main {
+    margin: 40px 45px;
+}
+
+.detail-breadcrumb {
+    display: flex;
+    margin-bottom: 40px;
+    justify-content: center;
+}
+
+.detail-breadcrumb span {
+    margin: 0 5px;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: bold;
+    color: #343434;
+}
+
+.detail-breadcrumb span a {
+    text-decoration: underline;
+    color: #4d4dff;
+}
+
+.detail-content-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.detail-content-section-image-large {
+    /* flex: 2; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-3px);
+}
+
+.detail-content-section-image-large img {
+    aspect-ratio: 8/12;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    height: auto;
+    max-height: 500px;
+    width: auto;
+    max-width: 100%; 
+}
+
+.detail-content-section-image-small {
+    /* flex: 1; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 10px;
+	padding-right: 0px;
+}
+
+.detail-content-section-buy {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.detail-content-section-buy-price {
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 500;
+    color: #343434;
+    margin-bottom: 12px;
+}
+
+.detail-content-info {
+    margin-top: 30px;
+}
+
+.detail-content-name h2 {
+    margin-bottom: 24px;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 38px;
+}
+
+.detail-content-desc h2 {
+    margin-bottom: 14px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.detail-content-desc p {
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.detail-content-section-image-small img {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    height: 162px;
+    width: auto;
+    margin: 5px 0;
+}
+
+.detail-content-section-image-small img:first-child {
+    margin-top: 0;
+}
+
+.detail-content-section-image-small img:last-child {
+    margin-bottom: 0;
+}
+
+.detail-content-section-buy-cart button {
+    background-color: #4d4dff;
+    border: 2px solid transparent;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+	color: white;
+	border-radius: 7px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.detail-content-section-buy-cart button:hover {
+    background-color: white;
+    color: #4d4dff;
+    border-color: #4d4dff;
+}
+
+@media only screen and (max-width: 767px) {
+    .detail-content-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .detail-content-section-image-large,
+    .detail-content-section-image-small {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .detail-content-section-image-large img {
+        max-width: 100%; 
+        height: auto;   
+        margin-bottom: 10px;
+        /* transform: translateX(4px); */
+    }
+
+    .detail-content-section-image-small {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .detail-content-section-image-small-item img {
+        width: calc((300px - 2*10px) / 3);
+        height: auto;
+        margin: 0 5px;
+    }
+    
+    .detail-content-section-image-small-item img:first-child {
+        margin-left: 0;
+    }
+    
+    .detail-content-section-image-small-item img:last-child {
+        margin-right: 0;
+    }
+    
+
+    .detail-content-section-buy {
+        margin-top: 20px;
+    }
+
+    .detail-content-info {
+        text-align: justify;
+    }
+
+    .detail-content-section-image-small-item img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+

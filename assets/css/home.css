@@ -1,0 +1,244 @@
+/* RMIT University Vietnam
+Course: COSC2430 Web Programming
+Semester: 2023B
+Assessment: Assignment 1
+Author: Duong Viet Hoang
+ID: S3962514 */
+
+/* Global settings */
+* {
+  box-sizing: border-box;
+  transition: all 0.1s ease-in-out;
+}
+body {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  background-color: #fafafa;
+  color: #333;
+  line-height: 1.6;
+}
+
+a {
+  color: #555;
+  text-decoration: none;
+  transition: color 0.05s ease;
+}
+
+a:hover {
+  color: #4d4dff;
+}
+
+/* Header styles */
+header {
+  background-color: #FFF;
+  padding: 10px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo img {
+  max-width: 50px;
+  height: auto;
+}
+
+.header-content-list {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  padding-inline-start: 10px;
+  padding-inline-end: 10px;
+}
+
+.header-content-list-item a {
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: #555;
+  font-weight: bold;
+}
+
+.header-content-list-item a:hover {
+  background-color: #4d4dff;
+  color: #fff;
+}
+
+.home-page .home-link, .fiction-page .fiction-link, .nonfiction-page .nonfiction-link {
+  color: #4d4dff;
+}
+
+/* Main content styles */
+main {
+  padding: 40px 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin: 40px 0;
+}
+
+.main-category {
+  margin-bottom: 40px;
+}
+
+.main-category-name {
+  font-weight: bold;
+  display: block;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.main-category-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+.main-category-content-item {
+  flex: 1;
+  margin: 0 15px;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  transition: transform 0.3s ease;
+}
+
+.main-category-content-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+  background-color: #4d4dff;
+}
+
+.main-category-content-item-name, .video-title {
+  font-weight: bold;
+  display: block;
+  padding-bottom: 10px;
+  padding-top: 15px;
+  text-align: center;
+  color: #333;
+}
+
+.main-category-content-item img, .video-container video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.main-category-content-item:hover .main-category-content-item-name {
+  color: #fff;
+}
+
+/* Footer styles */
+footer {
+  margin: 20px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-content-list-item a {
+  color: #ecf0f1;
+  margin: 0 15px;
+  transition: color 0.05s ease;
+}
+
+.footer-content-list-item a:hover {
+  text-decoration: none;
+  color: #4d4dff;
+}
+
+/* Video Section */
+.video-section {
+  max-width: 1440px;
+  margin: 60px auto 40px;
+  padding: 0 20px;
+}
+
+.video-container {
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+  margin-top: 80px;
+}
+
+.video-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+  background-color: #4d4dff;
+}
+
+.video-container:hover .video-title {
+  color: #fff;
+}
+
+.hamburger-btn {
+  display: none;
+}
+
+@media only screen and (max-width: 767px) {
+  .hamburger-btn {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  .header-content {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background-color: #FFF;
+    border-radius: 8px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .header-content.active {
+    display: flex;
+  }
+
+  .main-category-content {
+    grid-template-columns: 1fr;
+  }
+
+  .header-content-list {
+    flex-direction: column;
+  }
+
+  .header-content-list-item {
+    display: block;
+    margin: 0;
+    width: 100%;
+  }
+
+  .header-content-list-item a {
+    display: block;
+    padding: 10px 20px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .header-content-list-item a:hover {
+    background-color: #4d4dff;
+    color: #fff;
+  }
+
+  .show-nav .header-content {
+    display: flex;
+  }
+}
+

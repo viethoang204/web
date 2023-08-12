@@ -1,0 +1,99 @@
+<!--  RMIT University Vietnam
+Course: COSC2430 Web Programming
+Semester: 2023B
+Assessment: Assignment 1
+Author: Duong Viet Hoang
+ID: S3962514 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="assets/img/logo.png">
+    <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
+    <script src="assets/js/script.js" defer></script>
+    <title>Contact</title>
+</head>
+<body>
+    <header>
+      <a class="header-logo" href="index.html">
+            <img src="assets/img/logo.png" alt="logo">
+      </a>
+      <button class="hamburger-btn">
+            &#9776;
+        </button>
+        <nav class="header-content">
+            <ul class="header-content-list">
+                <li class="header-content-list-item"><a href="index.html" class="home-link">Home</a></li>
+                <li class="header-content-list-item"><a href="fiction.html" class="fiction-link">Fiction</a></li>
+                <li class="header-content-list-item"><a href="nonfiction.html" class="nonfiction-link">Nonfiction</a></li>
+              </ul>
+        </nav>
+    </header>
+
+    <main>
+      <h1>Contact Us</h1>
+
+      <div class="contact-form">
+        <form action="#" method="get" id="contact-form">
+
+          
+          <label for="purposes">Contact Purpose: </label>
+          <select name="purposes" id="purposes">
+            <option value="sell">I want to sell books</option>
+            <option value="buy">I want to buy books</option>
+          </select>
+          <br><br>
+
+          <label for="name">Your Name: </label>
+          <input type="text" id="name" name="name" required>
+          <br><br>
+
+          <label for="email">Your Email: </label>
+          <input type="email" id="email" name="email" required>
+          <br><br>
+
+          <label for="phone">Your Phone: </label>
+          <input type="tel" id="phone" name="phone" required>
+          <br><br>
+
+          <p>How can we contact you? </p>
+          <input type="checkbox" id="via-email" name="via-email" value="email">
+          <label for="via-email"> By email</label>
+          <input type="checkbox" id="via-phone" name="via-phone" value="phone">
+          <label for="via-phone"> By phone</label>
+          <br><br>
+
+          <p>Do you want to receive our weekly newsletter? </p>
+          <input type="radio" id="news-yes" name="newsletter" value="news-yes" checked>
+          <label for="news-yes">Yes</label>
+          <input type="radio" id="news-no" name="newsletter" value="news-no">
+          <label for="news-no">No</label>
+          
+
+          <p><label for="note">Your Note: </label></p>
+          <textarea id="note" name="note" rows="4" cols="50"></textarea>
+          <br><br>
+
+          <input type="submit" value="Submit">
+          <input type="reset" value="Reset">
+
+        </form>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <ul class="header-content-list">
+          <li class="header-content-list-item"><a href="infor.html">About Us</a></li>
+                <li class="header-content-list-item"><a href="infor.html">Privacy Policy</a></li>
+                <li class="header-content-list-item"><a href="infor.html">Terms</a></li>
+                <li class="header-content-list-item"><a href="infor.html">Copyright</a></li>
+                <li class="header-content-list-item"><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+  </footer>
+  </body>
+</html>

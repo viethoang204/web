@@ -1,0 +1,88 @@
+/* RMIT University Vietnam
+Course: COSC2430 Web Programming
+Semester: 2023B
+Assessment: Assignment 1
+Author: Duong Viet Hoang
+ID: S3962514 */
+
+/* Global settings */
+.contact-form {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+main h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.field-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.field-container label {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+input[type="text"], 
+input[type="email"], 
+input[type="tel"], 
+select, 
+textarea {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="checkbox"], 
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+input[type="submit"], 
+input[type="reset"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover, 
+input[type="reset"]:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 767px) {
+    .field-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    input[type="text"], 
+    input[type="email"], 
+    input[type="tel"], 
+    select, 
+    textarea {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .field-container label {
+        margin-bottom: 10px;
+    }
+}
